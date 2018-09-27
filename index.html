@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang='ja'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <title>Web Share API</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <button>Share</button>
+    <script>
+        const button = document.querySelector('button')
+        button.addEventListener('click', (e) => {
+            navigator.share({
+                url: '',
+                title: document.title,
+                text: 'Web Share API を使ってみる'
+            })
+        })
+    </script>
+</body>
+
+</html>
